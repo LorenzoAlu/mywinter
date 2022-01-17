@@ -1,43 +1,370 @@
 description = "Default layout"
 ==
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Winter CMS - {{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="Winter CMS">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="Winter CMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}">
-        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
-        {% styles %}
-    </head>
-    <body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
 
-        <!-- Header -->
-        <header id="layout-header">
-            {% partial 'site/header' %}
-        </header>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        <!-- Content -->
-        <section id="layout-content">
-            {% page %}
-        </section>
+    <!-- Primary Meta Tags -->
+    <title>Red site</title>
+    <meta name="title" content="Red site">
+    <meta name="description" content="Example of Site Made By Bootstrap 5">
 
-        <!-- Footer -->
-        <footer id="layout-footer">
-            {% partial 'site/footer' %}
-        </footer>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lorenzoalu.github.io/Red_template/">
+    <meta property="og:title" content="Red site">
+    <meta property="og:description" content="Example of Site Made By Bootstrap 5">
+    <meta property="og:image" content="./images/preview.jpg">
 
-        <!-- Scripts -->
-        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
-        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
-        {% framework extras %}
-        {% scripts %}
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lorenzoalu.github.io/Red_template/">
+    <meta property="twitter:title" content="Red site">
+    <meta property="twitter:description" content="Example of Site Made By Bootstrap 5">
+    <meta property="twitter:image" content="./media/preview.jpg">
+</head>
 
-    </body>
+
+<!-- logo -->
+<div class="container-fluid logo fixed-top bg-white">
+    <div class="row">
+        <div class="col-12" data-aos="fade-down">
+            <img src="{{'assets/images/logo.png'| theme}}" class="d-block mx-auto "  width= "100px" alt="foto del logo">
+        </div>
+    </div>
+</div>
+
+<!-- navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top margin-top-35  " data-aos="fade-down">
+    <div class="container-fluid  ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-md-center " id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">primo link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">secondo link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">terzo link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">ultimo link</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- header  -->
+
+<header class="container-fluid header ">
+    <div class="row h-100 justify-content-center align-items-center p-0">
+        <div class="col-12 text-center text-uppercase p-0" data-aos="fade-down">
+            <h1 class="display-1 text-main-color">lorem</h1>
+        </div>
+    </div>
+</header>
+
+<!-- da chiedere a simo posso sovrappore immagine in un altro modo? -->
+
+<!-- sezione 2  -->
+<!-- <section>
+<div class="contain section-2">
+    <div class="row">
+        <div class="col-12 section-2-text text-center">
+
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row  justify-content-center align-items-center section-2-second">
+        <div class="col-12 col-md-6 text-center " data-aos="fade-up">
+            <span> <strong class="display-5 text-main-color">❝</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias recusandae facilis similique iste autem saepe eius consequuntur optio illo laborum? Voluptates repellendus explicabo, doloremque consequuntur illo quidem temporibus atque fugiat. <strong class="display-5 text-main-color">❠</strong></span>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- sezione 3  -->
+
+<section class="container-fluid bg-accent-color">
+    <div class="row   ">
+        <div class="col-12   col-md-6 col-lg-3 d-flex justify-content-center align-items-center " data-aos="zoom-in">
+            <div class="card-custom m-5">
+                <div>
+                    <i class="fas fa-snowflake fa-3x"></i>
+                </div>
+                <div class="padding-5">
+                    <p> Lorem ipsum dolor</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12  col-md-6 col-lg-3 d-flex justify-content-center align-items-center"data-aos="zoom-in">
+            <div class="card-custom m-5">
+                <div>
+                    <i class="fas fa-mountain fa-3x"></i>
+                </div>
+                <div class="padding-5">
+                    <p> Lorem ipsum dolor</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"data-aos="zoom-in">
+            <div class="card-custom m-5">
+                <div>
+                    <i class="fas fa-map fa-3x"></i>
+                </div>
+                <div class="padding-5">
+                    <p> Lorem ipsum dolor</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"data-aos="zoom-in">
+            <div class="card-custom m-5">
+                <div>
+                    <i class="fas fa-campground fa-3x"></i>
+                </div>
+                <div class="padding-5">
+                    <p> Lorem ipsum dolor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- sezione 4 -->
+<section class="container-fluid bg-accent-color pt-5 section-4">
+    <div class="row mt-5 pt-5">
+        <div class="col-12 col-md-5 text-start mb-2 "data-aos="fade-up">
+            <h3 class="text-main-color text">Lorem ipsum dolor sit</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis in hic dolorem dignissimos quisquam quod, consequuntur reiciendis aperiam deserunt asperiores, possimus fugiat nemo ratione nobis officia mollitia minima vitae? Nihil!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptatum ut culpa nam odio asperiores veritatis, adipisci sapiente nesciunt eveniet ea voluptatibus tempore, aut dolores fuga dolor tenetur in. Ex?</p>
+
+        </div>
+        <div class="col-12 col-md-2 col">
+            <!-- col vuota per spazio  -->
+        </div>
+
+        <div class="col-12 col-md-5 text-end "data-aos="fade-up">
+            <h3 class="text-main-color">Lorem ipsum dolor sit</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis in hic dolorem dignissimos quisquam quod, consequuntur reiciendis aperiam deserunt asperiores, possimus fugiat nemo ratione nobis officia mollitia minima vitae? Nihil!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptatum ut culpa nam odio asperiores veritatis, adipisci sapiente nesciunt eveniet ea voluptatibus tempore, aut dolores fuga dolor tenetur in. Ex?</p>
+        </div>
+
+        <!-- bottone  -->
+        <div class="col-12 text-center mb-5" data-aos="fade-down">
+            <button type="button" class="btn btn-danger btn-custom ">lorem ipsum</button>
+        </div>
+    </div>
+</section>
+
+<!-- sezione 5 -->
+<section class="container-fluid section-5 mt-5 pt-5 ">
+    <div class="row">
+
+        <div class="col-12 text-uppercase my-3 " data-aos="zoom-in">
+            <h2 class="text-main-color">our timeline</h2>
+        </div>
+
+        <div class="col-12 col-md-6 card-custom-s-5 ms-md-3"data-aos="zoom-in">
+            <h3 class="text-main-color">lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt similique esse ea! Quaerat at voluptatum sit beatae. Ducimus optio sint velit, consequatur quae dolores, alias voluptate ipsam quos nisi doloremque!</p>
+        </div>
+
+        <div class="col-12 col-md-5"></div>
+
+        <div class="col-12 col-md-6 card-custom-s-5 ms-md-3"data-aos="zoom-in"><h3 class="text-main-color">lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt similique esse ea! Quaerat at voluptatum sit beatae. Ducimus optio sint velit, consequatur quae dolores, alias voluptate ipsam quos nisi doloremque!</p></div>
+
+        <div class="col-12 col-md-5"></div>
+
+        <div class="col-12 col-md-6 card-custom-s-5 ms-md-3"data-aos="zoom-in"><h3 class="text-main-color">lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt similique esse ea! Quaerat at voluptatum sit beatae. Ducimus optio sint velit, consequatur quae dolores, alias voluptate ipsam quos nisi doloremque!</p></div>
+
+        <div class="col-12 col-md-5"></div>
+
+        <div class="col-12 col-md-6 card-custom-s-5 ms-md-3"data-aos="zoom-in"><h3 class="text-main-color">lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt similique esse ea! Quaerat at voluptatum sit beatae. Ducimus optio sint velit, consequatur quae dolores, alias voluptate ipsam quos nisi doloremque!</p></div>
+
+        <div class="col-12 col-md-5"></div>
+
+    </div>
+</section>
+
+
+<!-- aggiungo una div con altezza fissa per dare spazio
+fra la sezione 4 e 5 visibile solo prima di hd -->
+
+
+
+<!-- sezione 6  -->
+<div class="container-fluid pt-5 pb-5 ps-4 bg-accent-color">
+    <div class="row justify-content-center" >
+        <div class="col-12 pb-5 " data-aos="fade-up">
+            <h2 class="text-main-color text-uppercase">our team</h2>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 " data-aos="fade-up">
+            <div class="card-custom-s-6 h-100">
+                <img src="{{'assets/images/header.jpg'| theme}}" class=" img-custom-s-6" alt="foto montanie">
+                <div class="card-body border-0 text-center">
+                    <h3 class="card-title text-main-color text-center">lorem ipsum </h3>
+                    <p class="card-text text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque perspiciatis numquam </p>
+
+                    <i class="fab fa-facebook-square text-main-color px-3"></i>
+
+                    <i class="fab fa-instagram text-main-color px-3"></i>
+
+                    <i class="fab fa-twitter text-main-color px-3"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 " data-aos="fade-up">
+            <div class="card-custom-s-6 h-100">
+                <img src="{{'assets/images/header.jpg'| theme}}" class=" img-custom-s-6" alt="foto montanie">
+                <div class="card-body border-0 text-center">
+                    <h3 class="card-title text-main-color text-center">lorem ipsum </h3>
+                    <p class="card-text text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque perspiciatis numquam </p>
+
+                    <i class="fab fa-facebook-square text-main-color px-3"></i>
+
+                    <i class="fab fa-instagram text-main-color px-3"></i>
+
+                    <i class="fab fa-twitter text-main-color px-3"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 "data-aos="fade-up">
+            <div class="card-custom-s-6 h-100">
+                <img src="{{'assets/images/header.jpg'|theme}}" class=" img-custom-s-6" alt="foto montanie">
+                <div class="card-body border-0 text-center">
+                    <h3 class="card-title text-main-color text-center">lorem ipsum </h3>
+                    <p class="card-text text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque perspiciatis numquam </p>
+
+                    <i class="fab fa-facebook-square text-main-color px-3"></i>
+
+                    <i class="fab fa-instagram text-main-color px-3"></i>
+
+                    <i class="fab fa-twitter text-main-color px-3"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 "data-aos="fade-up">
+            <div class="card-custom-s-6 h-100">
+                <img src="{{'assets/images/header.jpg'| theme}}" class=" img-custom-s-6" alt="foto montanie">
+                <div class="card-body border-0 text-center">
+                    <h3 class="card-title text-main-color text-center">lorem ipsum </h3>
+                    <p class="card-text text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque perspiciatis numquam </p>
+
+                    <i class="fab fa-facebook-square text-main-color px-3"></i>
+
+                    <i class="fab fa-instagram text-main-color px-3"></i>
+
+                    <i class="fab fa-twitter text-main-color px-3"></i>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- sezione 7  -->
+<section class="container-fluid bg-accent-color pt-5">
+    <div class="row ">
+        <div class="col-12 text-main-color text-uppercase " data-aos="fade-down">
+            <h2>our benefit</h2>
+        </div>
+
+        <div class="col-12 col-md-6 mt-5 mb-5 " data-aos="fade-down">
+            <h3 class="text-main-color">lorem impus dolo</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus blanditiis perferendis voluptatibus vitae quibusdam maiores ipsum temporibus inventore veniam voluptatem! Deleniti, numquam quae repellendus consequatur eos mollitia maiores inventore rem.</p>
+        </div>
+
+        <div class="col-12 col-md-6 " data-aos="fade-down">
+            <img class="img-fluid img-custom-s-7" src="{{'assets/images/nebbia-1.jpg'|theme}}" alt="foto montanie con nebbia">
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 col-md-6 mt-5 mb-5 " data-aos="fade-down">
+            <h3 class="text-main-color">lorem impus dolo</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus blanditiis perferendis voluptatibus vitae quibusdam maiores ipsum temporibus inventore veniam voluptatem! Deleniti, numquam quae repellendus consequatur eos mollitia maiores inventore rem.</p>
+        </div>
+
+        <div class="col-12 col-md-6 order-md-first" data-aos="fade-down">
+            <img class="img-fluid img-custom-s-7" src="{{'assets/images/nebbia-2.jpg'|theme}}" alt="foto montanie con nebbia">
+        </div>
+    </div>
+
+</section>
+
+<!-- sezione 8 - footer -->
+
+<!-- sezione aggiunta per avere l'effetto sovrapposto   -->
+
+<section class="container-fluid bg-accent-color footer mb-0">
+    <div class="row">
+        <col-12></col-12>
+    </div>
+</section>
+
+<footer class="container-fluid bg-main-color mt-0 pt-5 ps-4 pb-3">
+    <div class="row text-white">
+        <div class="col-12 text-uppercase" data-aos="fade-up">
+            <h2>lorem</h2>
+        </div>
+
+        <div class="col-12 col-md-8" data-aos="fade-up">
+            <h4 class="fw-bold">Testo generico</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur veritatis id officia optio sint praesentium quasi vel, dolorum repellat quaerat blanditiis commodi enim beatae vitae quis, quisquam, ipsam doloremque temporibus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias a voluptatum tenetur quasi quae ipsum consequatur sapiente excepturi tempore eaque dolor necessitatibus ducimus reprehenderit exercitationem id, ipsa reiciendis eligendi recusandae.</p>
+        </div>
+
+        <div class="col-12 col-md-4 quick-list" data-aos="fade-up">
+            <h4 class="fw-bold ps-2 ">Quick list</h4>
+            <ul>
+                <li><a href="">lorem link</a> </li>
+                <li><a href="">lorem link</a></li>
+                <li><a href="">lorem link</a></li>
+                <li><a href="">lorem link</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
+</body>
 </html>
