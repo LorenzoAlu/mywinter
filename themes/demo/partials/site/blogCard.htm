@@ -1,0 +1,14 @@
+<div class="row my-3">
+    <div class="col-12 col-md-4" data-aos="fade-down">
+        <img alt="foto montanie con nebbia" class="img-fluid img-custom-s-7" src="{{'assets/images/nebbia-1.jpg'|theme}}">
+    </div>
+    <div class="col-12 col-md-8 mt-5" data-aos="fade-down">
+        <h3 class="text-main-color">
+            <a class="text-main-color" href="{{ '/blog/' ~ post.slug }}">
+                {{ post.title }}
+            </a>
+        </h3>
+        <p>{{ post.content }}</p>
+        <p> {{ post.published_at|date('M d, Y') }}</p>
+    </div>
+</div>

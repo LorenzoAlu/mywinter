@@ -3,28 +3,28 @@ description = "Navbar partial"
 <div class="container-fluid logo fixed-top bg-white">
     <div class="row">
         <div class="col-12" data-aos="fade-down">
-            <img src="{{'assets/images/logo.png'| theme}}" class="d-block mx-auto "  width= "100px" alt="foto del logo">
+            <img alt="foto del logo" class="d-block mx-auto " src="{{'assets/images/logo.png'| theme}}" width="100px">
         </div>
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top margin-top-35  " data-aos="fade-down">
     <div class="container-fluid  ">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-md-center " id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a aria-current="page" class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/products">Prodotti</a>
+                    <a class="nav-link" href="/product/index">Prodotti</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">terzo link</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">ultimo link</a>
+                    <a aria-disabled="true" class="nav-link " href="/blog" tabindex="-1">Blog</a>
                 </li>
             </ul>
         </div>

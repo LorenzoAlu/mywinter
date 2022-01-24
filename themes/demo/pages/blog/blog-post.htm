@@ -1,0 +1,48 @@
+title = "blog post"
+url = "/blog/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+==
+{% set post = blogPost.post %}
+<div class="container-fluid   ">
+    <div class="row mt-50">
+        <div class="col-12 d-flex justify-content-center  min-height-custom align-items-center">
+            <div class="card-blog">
+                <div class="mt-50">
+                    <h1>
+                        {{ post.title }}
+                    </h1>
+                </div>
+                {% if post.featured_images.count %}
+                <div class="featured-images text-center mt-5">
+                    {% for image in post.featured_images %}
+                    <p>
+                        <img
+                                alt="{{ image.description }}"
+                                data-src="{{ image.filename }}"
+                                src="{{ image.path }}"
+                                style="max-width: 300px"/>
+                    </p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="content">
+                    {{ post.content_html|raw }}
+                </div>
+                <p class="info">
+                    Posted
+                    {% if post.categories.count %} in
+                    {% for category in post.categories %}
+                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    on {{ post.published_at|date('M d, Y') }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

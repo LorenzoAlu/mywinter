@@ -7,18 +7,18 @@ body {
 }
 
 
-h1,h2,h3 {
+h1, h2, h3 {
     font-family: 'Nova Square', cursive;
 }
 
 
 :root {
-    --main-color:darkred ;
-    --secondary-color:#C67F7F;
-    --accent-color:#ececec;
+    --main-color: darkred;
+    --secondary-color: #c67f7f;
+    --accent-color: #ececec;
 }
 
-.text-main-color{
+.text-main-color {
     color: var(--main-color);
 }
 
@@ -35,35 +35,42 @@ h1,h2,h3 {
 }
 
 .bg-secondary-color {
-    background-color:#C67F7F ;
+    background-color: #c67f7f;
 }
 
 .bg-accent-color {
-    background-color:#ececec ;
+    background-color: #ececec;
 }
 
 .padding-5 {
     padding: 5px;
 }
 
+.min-height-custom {
+    min-height: 100vh;
+}
+
 /* css per fixare seconda barra  */
 .margin-top-35 {
-    margin-top:40px
+    margin-top: 40px
+}
+
+.mt-50 {
+    margin-top: 50px;
 }
 
 /* header css */
 
 .header {
     height: 100vh;
-    background-image: linear-gradient(white 10%,transparent) , url(./../images/section-2.png) ,url(./../images/header.jpg);
-    background-size: cover , cover ;
+    background-image: linear-gradient(white 10%, transparent), url(./../images/section-2.png), url(./../images/header.jpg);
+    background-size: cover, cover;
     background-position: center;
 
 }
 
 
-
-@media screen and (min-width:992px){
+@media screen and (min-width: 992px) {
     h1 {
         letter-spacing: 40px;
     }
@@ -87,7 +94,7 @@ h1,h2,h3 {
     flex-direction: column;
     align-items: center;
     color: darkred;
-    padding:2px;
+    padding: 2px;
     position: relative;
 }
 
@@ -100,7 +107,7 @@ h1,h2,h3 {
     background-color: WHITE;
     content: "";
     position: absolute;
-    top:85px;
+    top: 85px;
 
 }
 
@@ -117,16 +124,13 @@ h1,h2,h3 {
 
 
 .section-4 {
-    background-image:  url(./../images/alberi-bianchi.png);
+    background-image: url(./../images/alberi-bianchi.png);
     background-size: contain;
     /* height: 700px; */
 
     background-position: bottom;
     background-repeat: no-repeat;
 }
-
-
-
 
 
 /* sezione 5  */
@@ -139,11 +143,11 @@ h1,h2,h3 {
 }
 
 
-
 .card-custom-s-5 {
     border-left: 3px solid darkred;
     position: relative;
-    padding-left: 15px;}
+    padding-left: 15px;
+}
 
 .card-custom-s-5::after {
     height: 25px;
@@ -153,21 +157,20 @@ h1,h2,h3 {
     background-color: WHITE;
     content: "";
     position: absolute;
-    top:0px;
-    left:-14px;
+    top: 0px;
+    left: -14px;
 }
 
 
-@media screen and (max-width:771px) {
+@media screen and (max-width: 771px) {
     .card-custom-s-5::after {
-        display:none;
+        display: none;
     }
 
-    .card-custom-s-5{
+    .card-custom-s-5 {
         border: none;
     }
 }
-
 
 
 /* sezione 6  */
@@ -182,7 +185,7 @@ h1,h2,h3 {
 
 
 .img-custom-s-6 {
-    border:3px solid darkred ;
+    border: 3px solid darkred;
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -191,7 +194,7 @@ h1,h2,h3 {
 
 /* sezione 7  */
 .img-custom-s-7 {
-    border:3px solid darkred ;
+    border: 3px solid darkred;
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -213,4 +216,22 @@ h1,h2,h3 {
 div.quick-list a {
     text-decoration: none;
     color: white;
+}
+
+/*blog pages*/
+
+
+/*blog post*/
+
+.card-blog {
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    width: 80%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 20px 2px 2px 15px rgba(0, 0, 0, 0.5%);
+
 }
